@@ -1,0 +1,156 @@
+.tours {
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s;
+  position: relative;
+  animation: swipe-right 0.7s 1;
+}
+.tours__title {
+  text-align: center;
+  margin-bottom: 34px;
+  .first {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .second {
+    font-size: 35px;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 40px;
+  column-gap: 35px;
+
+  .img__wrapper {
+    width: 100%;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.card {
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    transition: all 0.5s ease-in-out;
+    .place {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .price__wrapper {
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+  }
+  .place {
+    position: absolute;
+    top: 8px;
+    left: 36px;
+    color: white;
+  }
+  .price__wrapper {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .price {
+      color: white;
+    }
+  }
+}
+.place {
+  font-size: 30px;
+  line-height: 32px;
+}
+.price {
+  font-size: 50px;
+  line-height: 62px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1500px) {
+  .card {
+    .place {
+      position: absolute;
+      top: 6px;
+      left: 22px;
+      color: white;
+    }
+  }
+  .tours__title {
+    margin-bottom: 24px;
+    .first {
+      font-size: 35px;
+    }
+    .second {
+      font-size: 30px;
+    }
+  }
+  .cards {
+    row-gap: 24px;
+    column-gap: 24px;
+  }
+
+  .place {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .price {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width:992px) {
+  .cards {
+    row-gap: 16px;
+    column-gap: 16px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+
+  .tours__title {
+    .first {
+      font-size: 30px;
+      line-height: 43px;
+    }
+    .second {
+      font-size: 20px;
+      line-height: 19px;
+    }
+  }
+  .place {
+    font-size: 8px;
+    line-height: 10px;
+  }
+
+  .card {
+    .place {
+      position: absolute;
+      top: 4px;
+      left: 11px;
+      color: white;
+    }
+  }
+  .price {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+

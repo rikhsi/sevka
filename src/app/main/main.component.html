@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+
+<div class="main">
+  <app-hero></app-hero>
+  <div class="info__content main">
+    
+    <app-destinations></app-destinations>
+
+    <app-about-company id="about"></app-about-company>
+
+    @defer (on viewport) {
+      <app-tours id="tours"></app-tours>
+    }@placeholder {
+      <div></div>
+    }
+
+    @defer (on viewport) {
+      <app-contact-us></app-contact-us>
+    }@placeholder {
+      <div></div>
+    }
+    <app-footer id="contacts"></app-footer>
+  </div>
+</div>

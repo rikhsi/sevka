@@ -1,0 +1,21 @@
+.info__content {
+  max-width: 1433px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+@media screen and (max-width: 1500px) {
+  .info__wrapper {
+    margin-top: 70px;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+
+
+  @media (max-width: 992px) {
+    row-gap: 30px;
+  }
+}

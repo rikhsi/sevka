@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/ng-zorro-antd/ng-zorro-antd.less";
+
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+@keyframes swipe-right {
+  0% {
+      left: -100%;
+  }
+  100% {
+      left: 0;
+  }
+}
+
+h1,h2 {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.ant-modal-body {
+  padding: 0;
+}
+
+.ant-modal-content {
+  border-radius: 16px;
+}
